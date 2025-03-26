@@ -34,7 +34,7 @@ body {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   z-index: 999;
   display: flex;
