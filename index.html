@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bumay</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <!-- Spotify player -->
+    <div class="spotify-player">
+      <iframe
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/track/2VMhO32IsyhshnUoKhjCBE?utm_source=generator&theme=0"
+        width="100%"
+        height="145"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    </div>
+    <div class="main-box">
+      <img src="shadow.jpeg" alt="profile" class="profile-pic" />
+      <div class="search-bar">
+        How Long We've Been Together?
+        <img src="icon icon/icons8-search.svg" height="16" width="16" />
+      </div>
+
+      <div class="timer">
+        <div><span id="days">0000</span><br />Days</div>
+        <div><span id="hours">00</span><br />Hrs</div>
+        <div><span id="minutes">00</span><br />Mins</div>
+        <div><span id="seconds">00</span><br />Secs</div>
+      </div>
+
+      <button class="main-btn">❤️ I Have Something For U!</button>
+
+      <div class="button-group">
+        <button class="sub-btn1">
+          <img
+            src="icon icon/icons8-opened-folder.svg"
+            height="16"
+            width="15"
+          />Read Me!
+        </button>
+        <button class="sub-btn2" onclick="window.location.href='galery.html'">
+          <img src="icon icon/camera.svg" height="16" width="16" />Our Memories
+        </button>
+      </div>
+    </div>
+
+    <div id="popup2" class="popup-box2">
+      <p class="mainbtn">💖💖💖💖💖💖💖</p>
+      <div class="mainbtn-content">lopyu</div>
+      <button class="close-btn2">close</button>
+    </div>
+
+    <div id="popup" class="popup-box">
+      <p class="popup-title">My Love 💖</p>
+      <div class="popup-content">
+        You hold a special place in my heart. You're the one I can stay up for,
+        the one I never get tired of talking to, and the one who stays on my
+        mind all day long. You're the only one who can make me smile whithout
+        trying, bring down my mood whithout intention to and effect my emotionts
+        whit every actiont of yours. Every little thing you do affects me
+        deeply. I can't fully describe with words how much you mean to me, but I
+        do know thi you’re the one I’m afraid to lose and the one I always want
+        by my side.
+      </div>
+      <button class="close-btn">close</button>
+    </div>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
