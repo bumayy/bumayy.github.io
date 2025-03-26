@@ -37,7 +37,7 @@ body {
   z-index: 999;
   display: flex;
   justify-content: center;
-  padding: 0 16px; /* Biar gak mepet di pinggir HP */
+  padding: 0 5px; /* Biar gak mepet di pinggir HP */
   cursor: pointer;
 }
 
