@@ -47,10 +47,10 @@ body {
   transform: translate(-50%, -50%);
   background: rgba(180, 218, 237, 0.82);
   border-radius: 2vw;
-  padding: 1vw 3vw;
+  padding: 2vw 5vw;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  width: 70vw;
+  width: 72vw;
   max-width: 400px;
   font-size: 1rem;
 }
