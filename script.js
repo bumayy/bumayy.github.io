@@ -69,13 +69,20 @@ document.addEventListener("DOMContentLoaded", () => {
 function showPasswordBox() {
   document.getElementById("password-modal").style.display = "flex";
 }
-function promptPassword() {
-  const password = prompt("MASUK KAN PASSWORD SAYANG:");
-  const correctPassword = "amel"; // Ganti sesuai kebutuhan
 
-  if (password === correctPassword) {
+function closeModal() {
+  document.getElementById("password-modal").style.display = "none";
+  document.getElementById("password-input").value = "";
+  document.getElementById("error-msg").textContent = "";
+}
+
+function checkPassword() {
+  const input = document.getElementById("password-input").value;
+  const correctPassword = "amel";
+
+  if (input === correctPassword) {
     window.location.href = "galery.html";
-  } else if (password !== null) {
-    alert("DONGOK SALAH");
+  } else {
+    document.getElementById("error-msg").textContent = "SALAH DONGOK";
   }
 }
