@@ -65,3 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.style.display = "none";
   });
 });
+
+function promptPassword() {
+  const password = prompt("MASUK KAN PASWORD SAYANG:");
+  const correctPassword = "amel"; // Ganti sesuai kebutuhan
+
+  if (password === correctPassword) {
+    window.location.href = "galery.html";
+  } else if (password !== null) {
+    alert("DONGOK SALAH");
+  }
+}
