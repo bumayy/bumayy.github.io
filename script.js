@@ -86,3 +86,18 @@ function checkPassword() {
     document.getElementById("error-msg").textContent = "SALAH DONGOK";
   }
 }
+
+function positionSpotifyPlayer() {
+  const mainBox = document.querySelector(".main-box");
+  const spotifyPlayer = document.querySelector(".spotify-player");
+
+  if (mainBox && spotifyPlayer) {
+    const mainBoxRect = mainBox.getBoundingClientRect();
+    spotifyPlayer.style.top = `${mainBoxRect.bottom + 20}px`;
+    spotifyPlayer.style.left = "50%";
+    spotifyPlayer.style.transform = "translateX(-50%)";
+  }
+}
+
+window.addEventListener("load", positionSpotifyPlayer);
+window.addEventListener("resize", positionSpotifyPlayer);
