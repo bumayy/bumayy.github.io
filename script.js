@@ -66,8 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function showPasswordBox() {
+  document.getElementById("password-modal").style.display = "flex";
+}
 function promptPassword() {
-  const password = prompt("MASUK KAN PASWORD SAYANG:");
+  const password = prompt("MASUK KAN PASSWORD SAYANG:");
   const correctPassword = "amel"; // Ganti sesuai kebutuhan
 
   if (password === correctPassword) {
