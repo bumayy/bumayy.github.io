@@ -78,10 +78,31 @@ function closeModal() {
 
 function checkPassword() {
   const input = document.getElementById("password-input").value;
-  const correctPassword = "amel";
+  const correctPassword = "cewek kamu";
 
   if (input === correctPassword) {
     window.location.href = "galery.html";
+  } else {
+    document.getElementById("error-msg").textContent = "SALAH DONGOK";
+  }
+}
+
+function showPasswordBox1() {
+  document.getElementById("password-modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("password-modal").style.display = "none";
+  document.getElementById("password-input").value = "";
+  document.getElementById("error-msg").textContent = "";
+}
+
+function checkPassword() {
+  const input = document.getElementById("password-input").value;
+  const correctPassword = "cewek kamu";
+
+  if (input === correctPassword) {
+    window.location.href = "HBD.html";
   } else {
     document.getElementById("error-msg").textContent = "SALAH DONGOK";
   }
