@@ -66,7 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function showPasswordBox() {
+let targetPage = ""; // variabel global untuk menyimpan tujuan
+
+function showPasswordBox(target) {
+  targetPage = target; // simpan tujuan ke variabel global
   document.getElementById("password-modal").style.display = "flex";
 }
 
@@ -81,28 +84,11 @@ function checkPassword() {
   const correctPassword = "cewek kamu";
 
   if (input === correctPassword) {
-    window.location.href = "galery.html";
-  } else {
-    document.getElementById("error-msg").textContent = "SALAH DONGOK";
-  }
-}
-
-function showPasswordBox1() {
-  document.getElementById("password-modal").style.display = "flex";
-}
-
-function closeModal() {
-  document.getElementById("password-modal").style.display = "none";
-  document.getElementById("password-input").value = "";
-  document.getElementById("error-msg").textContent = "";
-}
-
-function checkPassword() {
-  const input = document.getElementById("password-input").value;
-  const correctPassword = "cewek kamu";
-
-  if (input === correctPassword) {
-    window.location.href = "HBD.html";
+    if (targetPage === "galery") {
+      window.location.href = "galery.html";
+    } else if (targetPage === "hbd") {
+      window.location.href = "HBD.html";
+    }
   } else {
     document.getElementById("error-msg").textContent = "SALAH DONGOK";
   }
