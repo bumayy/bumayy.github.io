@@ -66,11 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-let targetPage = ""; // variabel global untuk menyimpan tujuan
+let targetPage = ""; // simpan tujuan dari tombol
 
-function showPasswordBox(target) {
-  targetPage = target; // simpan tujuan ke variabel global
+function showPasswordBox(page) {
+  targetPage = page;
   document.getElementById("password-modal").style.display = "flex";
+  document.getElementById("error-msg").textContent = "";
+  document.getElementById("password-input").value = "";
 }
 
 function closeModal() {
@@ -80,15 +82,21 @@ function closeModal() {
 }
 
 function checkPassword() {
-  const input = document.getElementById("password-input").value;
-  const correctPassword = "cewek kamu";
+  const input = document.getElementById("password-input").value.trim();
 
-  if (input === correctPassword) {
-    if (targetPage === "galery") {
-      window.location.href = "galery.html";
-    } else if (targetPage === "hbd") {
-      window.location.href = "HBD.html";
-    }
+  const passwordMap = {
+    hbd: {
+      amel: "gatau.html",
+      hilang: "HBD.html",
+    },
+    galery: {
+      hilang: "galery.html",
+      amel: "gatau.html",
+    },
+  };
+
+  if (passwordMap[targetPage] && passwordMap[targetPage][input]) {
+    window.location.href = passwordMap[targetPage][input];
   } else {
     document.getElementById("error-msg").textContent = "SALAH DONGOK";
   }
