@@ -98,7 +98,8 @@ function checkPassword() {
   if (passwordMap[targetPage] && passwordMap[targetPage][input]) {
     window.location.href = passwordMap[targetPage][input];
   } else {
-    document.getElementById("error-msg").textContent = "SALAH DONGOK";
+    document.getElementById("error-msg").textContent =
+      "SALAH DONGOK. LU SIAPA ANJING!";
   }
 }
 
