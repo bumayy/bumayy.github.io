@@ -87,10 +87,10 @@ function checkPassword() {
   const passwordMap = {
     hbd: {
       amel: "gatau.html",
-      cewek kamu: "HBD.html",
+      cewekkamu: "HBD.html",
     },
     galery: {
-      cewek kamu: "galery.html",
+      cewekkamu: "galery.html",
       amel: "gatau.html",
     },
   };
@@ -99,7 +99,7 @@ function checkPassword() {
     window.location.href = passwordMap[targetPage][input];
   } else {
     document.getElementById("error-msg").textContent =
-      "SALAH DONGOK. MAAF INI BUKAN AMEL KAH?";
+      "SALAH DONGOK, INI AMEL KAN KOK LUPA?";
   }
 }
 
