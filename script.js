@@ -115,5 +115,30 @@ function positionSpotifyPlayer() {
   }
 }
 
+// Popup Happy Birthday
+function showHbdPopup() {
+  document.getElementById("popup-hbd").style.display = "flex";
+}
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".close-hbd").addEventListener("click", () => {
+    document.getElementById("popup-hbd").style.display = "none";
+  });
+});
+
+function showPasswordBox(page) {
+  targetPage = page;
+
+  // tampilkan modal password
+  document.getElementById("password-modal").style.display = "flex";
+  document.getElementById("error-msg").textContent = "";
+  document.getElementById("password-input").value = "";
+
+  // kalau popup HBD masih terbuka → tutup
+  const hbdPopup = document.getElementById("popup-hbd");
+  if (hbdPopup && hbdPopup.style.display === "flex") {
+    hbdPopup.style.display = "none";
+  }
+}
+
 window.addEventListener("load", positionSpotifyPlayer);
 window.addEventListener("resize", positionSpotifyPlayer);
