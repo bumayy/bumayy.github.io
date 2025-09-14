@@ -248,6 +248,22 @@ body {
   background-color: #ff2e5f;
 }
 
+.btn-ekhm {
+  background: #4b7bff;
+  color: white;
+  font-weight: bold;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-ekhm:hover {
+  background-color: #ff2e5f;
+}
+
 .close-hbd {
   background: #ccc;
   border: none;
